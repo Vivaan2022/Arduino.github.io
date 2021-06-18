@@ -1,0 +1,94 @@
+
+
+
+
+
+<html>
+<head>
+<title> Servo Motor</title>
+<style>
+.header {
+  background-color:#87ADFF;
+  padding:30px;
+  text-transform:uppercase;
+  font-size:40px;
+  font-family:courier;
+  color:white;
+ }
+
+.back { 
+ background:#AB1E1E;
+  border-radius: 15px 15px 15px 15px;
+ }
+</style>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the code: ");
+}
+
+</script>
+</head>
+<body>
+<h1 class="header">
+<center>Servo Motor
+</center>
+</h1>
+<a href="index.html">
+<button class="back">
+ &larr; Back 
+</button>
+</a>
+<table width="1540px">
+ <tr>
+   <th colspan="2"> Code and Diagram </th>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <img src="Servo Motor.jpg"/> </center></td>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <p> Code :- <br><br>
+<img src="Servo Motor Code.jpg"/>
+<p>
+<input type="text" value="
+
+
+
+#include <Servo.h>
+
+int pos = 0;
+
+Servo servo_9;
+
+void setup()
+{
+  servo_9.attach(9, 500, 2500);
+
+}
+
+void loop()
+{
+ 
+  for (pos = 0; pos <= 180; pos += 1) {
+    // tell servo to go to position in variable 'pos'
+    servo_9.write(pos);
+    
+    delay(15); 
+  }
+  for (pos = 180; pos >= 0; pos -= 1) {
+    // tell servo to go to position in variable 'pos'
+    servo_9.write(pos);
+    delay(15); 
+  }
+}
+" id="myInput"></p>
+<button onclick="myFunction()">Copy text</button>
+
+</center>
+</p></td>
+</tr>
+</table>
+</body>

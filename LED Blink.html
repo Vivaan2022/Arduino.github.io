@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<title> LED Blink</title>
+<style>
+.header {
+  background-color:#87ADFF;
+  padding:30px;
+  text-transform:uppercase;
+  font-size:40px;
+  font-family:courier;
+  color:white;
+ }
+
+.back { 
+ background:#AB1E1E;
+  border-radius: 15px 15px 15px 15px;
+ }
+</style>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+</head>
+<body>
+<h1 class="header">
+<center>
+ LED Blink
+</center>
+</h1>
+<a href="index.html">
+<button class="back">
+ &larr; Back 
+</button>
+</a>
+
+<table width="1540px">
+ <tr>
+   <th colspan="2"> Code and Diagram </th>
+ </tr>
+ <tr>
+   <td colspan="2"> <img src="LED Blink.jpg"/> </td>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <p> Code :- <br><br>
+<center>
+<img src="LED Blink Code.jpg"/>
+</center>
+<p>
+<input type="text" value="void setup()
+{
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(11, HIGH);
+  delay(1000); 
+  digitalWrite(11, LOW);
+  delay(1000); 
+}
+" id="myInput"></p>
+<button onclick="myFunction()">Copy text</button>
+
+</center>
+</p></td>
+</tr>
+</table>
+</body>

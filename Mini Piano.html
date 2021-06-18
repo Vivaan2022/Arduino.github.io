@@ -1,0 +1,98 @@
+
+
+
+
+
+<html>
+<head>
+<title> Mini Piano</title>
+<style>
+.header {
+  background-color:#87ADFF;
+  padding:30px;
+  text-transform:uppercase;
+  font-size:40px;
+  font-family:courier;
+  color:white;
+ }
+
+.back { 
+ background:#AB1E1E;
+  border-radius: 15px 15px 15px 15px;
+ }
+</style>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the code: ");
+}
+
+</script>
+</head>
+<body>
+<h1 class="header">
+<center>
+ Mini Piano
+</center>
+</h1>
+<a href="index.html">
+<button class="back">
+ &larr; Back 
+</button>
+</a>
+<table width="1540px">
+ <tr>
+   <th colspan="2"> Code and Diagram </th>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <img src="Mini Piano.jpg"/> </center></td>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <p> Code :- <br><br>
+<img src="Mini Piano Code.jpg"/>
+<p>
+<input type="text" value="
+
+
+
+int pos = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(8, OUTPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(A3, INPUT);
+}
+
+void loop()
+{
+  
+  if (digitalRead(A0) == HIGH) {
+    tone(8, 440, 100); // play tone 57 (A4 = 440 Hz)
+  }
+  
+  if (digitalRead(A1) == HIGH) {
+    tone(8, 494, 100); // play tone 59 (B4 = 494 Hz)
+  }
+ 
+  if (digitalRead(A2) == HIGH) {
+    tone(8, 523, 100); // play tone 60 (C5 = 523 Hz)
+  }
+  if (digitalRead(A3) == HIGH) {
+    tone(8, 465, 100); // play tone 73 (D4 = 465 Hz)
+  } // You can change the tone according
+  delay(10); 
+}
+" id="myInput"></p>
+<button onclick="myFunction()">Copy text</button>
+
+</center>
+</p></td>
+</tr>
+</table>
+</body>

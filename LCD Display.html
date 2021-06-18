@@ -1,0 +1,80 @@
+
+
+
+<html>
+<head>
+<title> LCD Display</title>
+<style>
+.header {
+  background-color:#87ADFF;
+  padding:30px;
+  text-transform:uppercase;
+  font-size:40px;
+  font-family:courier;
+  color:white;
+ }
+
+.back { 
+ background:#AB1E1E;
+  border-radius: 15px 15px 15px 15px;
+ }
+</style>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the code: ");
+}
+</script>
+</head>
+<body>
+<h1 class="header">
+<center>
+ Neopixel Disco
+</center>
+</h1>
+<a href="index.html">
+<button class="back">
+ &larr; Back 
+</button>
+</a>
+
+<table width="1540px">
+ <tr>
+   <th colspan="2"> Code and Diagram </th>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <img src="LCD Display.jpg"/> </center></td>
+ </tr>
+ <tr>
+   <td colspan="2"><center> <p> Code :- <br><br>
+<img src="LCD Display Code.jpg"/>
+<p class="box">
+<input type="text" value="
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  lcd.begin(16, 2);
+  // Change Text
+  lcd.print("hello, world!");
+}
+
+void loop() {
+ 
+  lcd.setCursor(0, 1);
+  lcd.print(millis() / 1000);
+}
+ 
+" id="myInput">
+</p>
+<button onclick="myFunction()">Copy text</button>
+
+</center>
+</p></td>
+</tr>
+</table>
+</body>
