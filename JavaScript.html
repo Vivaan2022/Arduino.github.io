@@ -122,19 +122,22 @@ return true;
 <div class="wrapper">
 <h2>Contact Us</h2>
 <form id="myform" action="https://formsubmit.co/vivaan.varshney23@gmail.com" method="POST">
+ <input type="hidden" name="_subject" value="New submission!">
+ <input type="email" name="email" placeholder="Email Address">
 <div class="input_field">
-<input type="text" placeholder="Name" id="name" required>
+<input type="text" placeholder="Name" id="name" name="name" required>
 </div>
 <br>
 <div class="input_field">
-<input type="text" placeholder="Phone" id="phone" required>
+<input type="text" placeholder="Phone" id="phone" name="phone" required>
 </div>
 <br>
 <div class="input_field">
-<input type="text" placeholder="Email" id="email" required>
+<input type="text" placeholder="Email" id="email" name="email" required>
 </div>
 <br>
 <div class="input_field">
+  <input type="text" name="message" placeholder="Type Your Message">
 <textarea placeholder="Message" id="message"></textarea>
 </div>
 <br>
