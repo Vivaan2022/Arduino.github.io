@@ -121,7 +121,7 @@ return true;
 <h3><-- Back --></h3></a>
 <div class="wrapper">
 <h2>Contact Us</h2>
-<form id="myform">
+<form id="myform" action=”mailto:contact@yourdomain.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
 <div class="input_field">
 <input type="text" placeholder="Name" id="name">
 </div>
@@ -139,7 +139,7 @@ return true;
 </div>
 <br>
 <div class="btn">
-<input type="submit" onclick="return validate()">
+<input type="submit" onclick="return validate()" value=”Submit”>
 </div>
 <div id="error_message"></div>
 </form>
