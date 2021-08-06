@@ -18,7 +18,10 @@ body{
   background-color:#00E1FF;
 
  }
-
+.m2 {
+ width:70%;
+ height:20px;
+ }
 .wrapper {
 position:absolute;
 top:50%;
@@ -136,14 +139,12 @@ return true;
 </div>
 <br>
 <div class="input_field">
- <textarea id="message">
-  <input type="text" name="message" placeholder="Type Your Message" >
+  <input type="text" name="message" placeholder="Type Your Message" id="message" class="m2">
  </input>
- </textarea>
 </div>
 <br>
 <div class="btn">
-<input type="submit" onclick="return validate()" value=”Submit”>
+<input type="submit" onclick="return validate()" value=Submit>
 </div>
 <div id="error_message"></div>
 <input type="hidden" name="_next" value="https://www.tinyurl.com/Vivaan-Arduino/THANK YOU.html">
